@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Pizza.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Header -->
+<header>
+    <div id="navBar">
+        <span id="navTitle">
+            <h1 class="roboto-slab-h1">Ian's Pizza</h1>
+        </span>
+    </div>  
+</header>
+
+<!-- Body -->
+<body style="background-color:#141414">
+        <form>
+            <fieldset style="display: inline;">
+                <legend class="roboto-slab-h2"><h2>Choose Size:</h2></legend>
+                <label><input type="radio" name="Size" value="7.99"><span class="roboto-slab-body" onclick="sizeChange('Small')">Small</span></label>
+                <label><input type="radio" name="Size" value="10.99"><span class="roboto-slab-body" onclick="sizeChange('Medium')">Medium</span></label>
+                <label><input type="radio" name="Size" value="15.99" checked><span class="roboto-slab-body" onclick="sizeChange('Large')">Large</span></label>
+            </fieldset>
+    
+            <fieldset style="display: inline;">
+                <legend class="roboto-slab-h2"><h2>Choose toppings:</h2></legend>           
+                <label><input class="roboto-slab-body" type="checkbox" id="pepperoni"><span class="roboto-slab-body" onclick="toppingChange(' Pepperoni')">Pepperoni</span></label>
+                <label><input class="roboto-slab-body" type="checkbox" id="sausage"><span class="roboto-slab-body" onclick="toppingChange(' Sausage')">Sausage</span></label>
+                <label><input class="roboto-slab-body" type="checkbox" id="mushrooms"><span class="roboto-slab-body" onclick="toppingChange(' Mushrooms')">Mushrooms</span></label>
+                <label><input class="roboto-slab-body" type="checkbox" id="blackOlives"><span class="roboto-slab-body" onclick="toppingChange(' Black Olives')">Black Olives</span></label>
+                <label><input class="roboto-slab-body" type="checkbox" id="greenOlives"><span class="roboto-slab-body" onclick="toppingChange(' Green Olives')">Green Olives</span></label>
+            </fieldset>
+            <br>
+
+            <fieldset style="display: inline;">
+                <legend class="roboto-slab-h2"><h2>Cart:</h2></legend>  
+                <p class="roboto-slab-body" id="itemList"></p>
+                <br>
+                <p class="roboto-slab-body" id="out1">Subtotal: $0.00</p><!-- subtotal-->
+                <p class="roboto-slab-body" id="out2">Tax: $0.00</p><!--Tax-->
+                <p class="roboto-slab-body" id="out3">Total: $0.00</p><!--Total-->
+            </fieldset>
+            
+            <input type="reset" value="Reset!" onclick="reset1()">
+
+                        
+            <div style="position: relative;">
+                <img src="Pizza/pizza.png" style="width: 200px; height: 200px;" alt="">
+                <img src="Pizza/pepperoni.png" style="width: 50px; height: 50px; left: 100px; bottom: -150px;" alt="">
+                <img src="Pizza/sausage.png" style="width: 50px; height: 50px; left: 80px; bottom: -100px;" alt="">
+                <img src="Pizza/mushrooms.png" style="width: 50px; height: 50px; left: 40px; bottom: -90px;" alt="">
+                <img src="Pizza/black olives.png" style="width: 50px; height: 50px; left: 40px; bottom: -140px;" alt="">
+                <img src="Pizza/green olives.png" style="width: 50px; height: 50px; left: 60px; bottom: -170px;" alt="">
+            </div>
+      </form>
+</body>
+</html>
