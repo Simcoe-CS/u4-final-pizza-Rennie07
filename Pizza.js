@@ -65,14 +65,14 @@ function toppingChange(obj) {// if a topping is clicked
         toppings.splice(index, 1); // 2nd parameter means remove one item only
         console.log("Removing: " + String(obj));
         subtotal = subtotal -= 1.5;//subtracting $1.00 from subtotal
-
-        document.getElementById((obj.trim()).toLowerCase()).checked = false;
+        document.getElementById((obj.trim()).toLowerCase() + "one").style.opacity = 0;
+        document.getElementById((obj.trim()).toLowerCase()).checked = true;
     } else {
         toppings[toppings.length] = String(obj);
         console.log("Adding: " + String(obj));
         subtotal = subtotal += 1.5;//adding $1.00 to the subtotal
-
-        document.getElementById((obj.trim()).toLowerCase()).checked = true;
+        document.getElementById((obj.trim()).toLowerCase() + "one").style.opacity = 1;
+        document.getElementById((obj.trim()).toLowerCase()).checked = false;
     }
     calculateCart();
 }
