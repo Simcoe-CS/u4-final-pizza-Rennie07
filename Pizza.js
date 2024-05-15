@@ -26,6 +26,7 @@ function reset1() {
 
     //reset array
     toppings = [];
+    sizeChange("Large");
 
     //Displaying Price
     out1.innerHTML = "Subtotal: $" + (subtotal.toFixed(2));//subtotal
